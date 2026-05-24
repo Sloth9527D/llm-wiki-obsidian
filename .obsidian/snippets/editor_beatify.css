@@ -1,0 +1,37 @@
+/* 标题居中 */
+.view-content .markdown-source-view .inline-title {
+    align-self: center;
+}
+
+.markdown-preview-view .mod-header .inline-title {
+    text-align: center;
+}
+
+/* 选中高亮 */
+::selection {
+    color: white !important;
+    background: darkcyan !important;
+}
+
+/* 高亮当前行 */
+.markdown-source-view.mod-cm6 .cm-line.cm-active {
+    background-color: rgba(var(--mono-rgb-100), 0.05)
+}
+
+/*高亮当前行 */
+.markdown-source-view.mod-cm6 .cm-lineNumbers .cm-gutterElement.cm-active {
+    font-weight: 600;
+    color: grey;
+}
+
+/*阅读模式渐变色分割线*/
+/* .markdown-preview-view hr {
+    border-top: 1px solid;
+    border-image: linear-gradient(to right, #ef201c, #e96036, #e6ef82, #e09a29, #41e249, #26c6da, #4e5ff2, #7e57c2, #de5fb8) 7;
+} */
+
+/*实时模式渐变色分割线*/
+/* .markdown-source-view div.hr.cm-line hr {
+    border-top: 1px solid;
+    border-image: linear-gradient(to right, #ef201c, #e96036, #e6ef82, #e09a29, #41e249, #26c6da, #4e5ff2, #7e57c2, #de5fb8) 7;
+} */

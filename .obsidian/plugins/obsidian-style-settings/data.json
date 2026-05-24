@@ -4,10 +4,12 @@
   "obsidian-setting-grid-layout@@installed-plugin-layout": true,
   "obsidian-setting-grid-layout@@plugin-layout": true,
   "obsidian-setting-grid-layout@@hotkey-layout": true,
-  "Mo-Table@@tbMH-qkms": "tbMH-fqk",
-  "Mo-Table@@tbMH-yangshi": "tbMH-zhi",
+  "Mo-Table@@tbMH-qkms": "tbMH-zdykd-jz",
+  "Mo-Table@@tbMH-yangshi": "tbMH-yuan",
   "wxlbMH@@wxlbMH-STMS-CTH": "wxlbMH-STMS-CTH-PT",
   "wxlbMH@@wxlbMH-STMS": "wxlbMH-STMS-cssclasses",
   "minimal-style@@callouts-style": "callouts-default",
-  "minimal-style@@tabs-style": "tabs-underline"
+  "minimal-style@@tabs-style": "tabs-underline",
+  "Mo-Table@@tbMH-ds": "tbMH-ds-bt",
+  "Mo-Table@@tbMH-tt@@light": "#6BA2B6"
 }

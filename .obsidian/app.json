@@ -7,5 +7,7 @@
   "promptDelete": false,
   "newFileLocation": "current",
   "showUnsupportedFiles": false,
-  "deleteUnlinkedAttachments": "never"
+  "deleteUnlinkedAttachments": "never",
+  "livePreview": false,
+  "attachmentFolderPath": "raw/assets"
 }

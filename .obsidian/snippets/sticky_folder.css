@@ -1,0 +1,325 @@
+/* =========================================================
+   Obsidian Minimal Modern Folder System (高亮纯净版)
+   ========================================================= */
+
+:root {
+    --folder-1: #b980ea;
+    --folder-2: #5d9eff;
+    --folder-3: #ff8c6b;
+    --folder-4: #9bc06e;
+    --folder-5: #6c9ebf;
+    --folder-6: #d9996c;
+    --folder-7: #86cc8a;
+
+    --folder-radius: 4px;
+    --folder-gap: 4px;
+    --folder-bg-opacity: 0.03;
+    --file-hover-bg: rgba(255, 255, 255, 0.05);
+    /* 🔴 新增：定义干净纯粹的选中高亮底色 */
+    --item-active-bg: rgba(255, 255, 255, 0.12);
+    --transition-fast: 120ms ease;
+}
+
+/* =========================================================
+   基础清理与修复
+   ========================================================= */
+
+.nav-folder-title,
+.nav-file-title {
+    background: transparent !important;
+    border: none !important;
+}
+
+.tree-item-self {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+}
+
+.tree-item-children,
+.nav-folder-children {
+    border-left: none !important;
+}
+
+.tree-item-icon {
+    display: none !important;
+}
+
+.nav-folder-collapse-indicator {
+    display: flex !important;
+    opacity: 0.4;
+    width: 16px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2px;
+    transition: opacity var(--transition-fast);
+}
+
+.nav-folder-title:hover .nav-folder-collapse-indicator {
+    opacity: 0.9;
+}
+
+.nav-folder-children {
+    margin-left: 0 !important;
+    padding-left: 18px !important;
+}
+
+/* =========================================================
+   一级目录 (顶层卡片)
+   ========================================================= */
+
+.nav-files-container>div>.tree-item.nav-folder {
+    margin-bottom: var(--folder-gap);
+    border-radius: var(--folder-radius);
+    background: rgba(255, 255, 255, var(--folder-bg-opacity));
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-files-container>div>.tree-item.nav-folder::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--folder-color);
+    z-index: 1;
+}
+
+.nav-files-container>div>.tree-item.nav-folder>.tree-item-self.nav-folder-title {
+    padding-left: 8px !important;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    font-weight: 600;
+    color: var(--folder-color);
+    border-radius: 0;
+    transition: background var(--transition-fast);
+}
+
+.nav-files-container>div>.tree-item.nav-folder>.tree-item-self.nav-folder-title:hover {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.nav-files-container>div>.tree-item.nav-folder>.tree-item-self.nav-folder-title.is-active {
+    background: var(--item-active-bg) !important;
+}
+
+/* 顶层目录依旧隐藏 SVG 图标 */
+.nav-files-container>div>.tree-item.nav-folder>.tree-item-self.nav-folder-title .nav-folder-title-content::before {
+    display: none !important;
+}
+
+/* =========================================================
+   二级及以下目录 (无卡片，有图标)
+   ========================================================= */
+
+.tree-item.nav-folder .tree-item.nav-folder {
+    background: transparent !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.tree-item.nav-folder .tree-item.nav-folder::before {
+    display: none !important;
+}
+
+.tree-item.nav-folder .tree-item.nav-folder>.tree-item-self.nav-folder-title {
+    color: color-mix(in srgb, var(--folder-color) 85%, white);
+    font-weight: 500;
+    border-radius: var(--folder-radius);
+    padding-left: 4px !important;
+}
+
+.tree-item.nav-folder .tree-item.nav-folder>.tree-item-self.nav-folder-title:hover {
+    background: var(--file-hover-bg) !important;
+}
+
+/* =========================================================
+   文件与通用激活状态 (🔴 核心优化区)
+   ========================================================= */
+
+.nav-file-title {
+    border-radius: var(--folder-radius);
+    padding-left: 4px !important;
+    transition: background var(--transition-fast);
+}
+
+.nav-file-title:hover {
+    background: var(--file-hover-bg);
+}
+
+.nav-file-title-content {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    opacity: 0.82;
+}
+
+/* 强制覆盖原生的浑浊强调色，使用干净纯粹的半透明白 */
+.nav-file-title.is-active,
+.tree-item.nav-folder .tree-item.nav-folder>.tree-item-self.nav-folder-title.is-active {
+    background-color: var(--item-active-bg) !important;
+}
+
+/* 选中时，文字变成绝对纯白，字重加粗，更加醒目锐利 */
+.nav-file-title.is-active .nav-file-title-content,
+.tree-item.nav-folder .tree-item.nav-folder>.tree-item-self.nav-folder-title.is-active .nav-folder-title-content {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    font-weight: 600;
+}
+
+/* =========================================================
+   动态 SVG 矢量图标系统
+   ========================================================= */
+
+.nav-folder-title-content::before,
+.nav-file-title-content::before {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    background-color: currentColor;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    transition: opacity var(--transition-fast), color var(--transition-fast);
+}
+
+/* 状态 1：展开时的子文件夹 (Open Folder 图标) */
+.tree-item.nav-folder .tree-item.nav-folder:not(.is-collapsed)>.tree-item-self .nav-folder-title-content::before {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 14 1.45-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.55 6a2 2 0 0 1-1.94 1.5H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H18a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 14 1.45-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.55 6a2 2 0 0 1-1.94 1.5H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H18a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E");
+    opacity: 0.9;
+}
+
+/* 状态 2：折叠时的子文件夹 (Closed Folder 图标) */
+.tree-item.nav-folder .tree-item.nav-folder.is-collapsed>.tree-item-self .nav-folder-title-content::before {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z'/%3E%3C/svg%3E");
+    opacity: 0.7;
+}
+
+/* 文件图标 (文档) */
+.nav-file-title-content::before {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z'/%3E%3Cpolyline points='14 2 14 8 20 8'/%3E%3Cline x1='16' y1='13' x2='8' y2='13'/%3E%3Cline x1='16' y1='17' x2='8' y2='17'/%3E%3Cpolyline points='10 9 9 9 8 9'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z'/%3E%3Cpolyline points='14 2 14 8 20 8'/%3E%3Cline x1='16' y1='13' x2='8' y2='13'/%3E%3Cline x1='16' y1='17' x2='8' y2='17'/%3E%3Cpolyline points='10 9 9 9 8 9'/%3E%3C/svg%3E");
+    opacity: 0.4;
+}
+
+/* 选中时，强制图标完全不透明，并且继承文字的纯白色 */
+.nav-file-title.is-active .nav-file-title-content::before,
+.tree-item.nav-folder .tree-item.nav-folder>.tree-item-self.nav-folder-title.is-active .nav-folder-title-content::before {
+    opacity: 1 !important;
+    color: #ffffff !important;
+}
+
+/* =========================================================
+   顶级目录配色（7色循环）
+   ========================================================= */
+.nav-files-container>div>.tree-item.nav-folder:nth-child(7n+1) {
+    --folder-color: var(--folder-1);
+}
+
+.nav-files-container>div>.tree-item.nav-folder:nth-child(7n+2) {
+    --folder-color: var(--folder-2);
+}
+
+.nav-files-container>div>.tree-item.nav-folder:nth-child(7n+3) {
+    --folder-color: var(--folder-3);
+}
+
+.nav-files-container>div>.tree-item.nav-folder:nth-child(7n+4) {
+    --folder-color: var(--folder-4);
+}
+
+.nav-files-container>div>.tree-item.nav-folder:nth-child(7n+5) {
+    --folder-color: var(--folder-5);
+}
+
+.nav-files-container>div>.tree-item.nav-folder:nth-child(7n+6) {
+    --folder-color: var(--folder-6);
+}
+
+.nav-files-container>div>.tree-item.nav-folder:nth-child(7n+0) {
+    --folder-color: var(--folder-7);
+}
+
+/* =========================================================
+   Typography & 暗色阴影
+   ========================================================= */
+/* .nav-folder-title-content,
+.nav-file-title-content {
+    line-height: 1.2;
+}
+
+.theme-dark .nav-files-container>div>.tree-item.nav-folder {
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.015);
+} */
+
+/* =========================================================
+   Active & Selected Item — Full-width Solid Highlight
+   Reference: left panel dark red-pink fill style
+   ========================================================= */
+
+/* =========================================================
+   1. Active file — solid fill using folder color
+   ========================================================= */
+
+.nav-file-title.is-active {
+    background: color-mix(in srgb, var(--folder-color, #5d9eff) 18%, transparent) !important;
+    border-radius: 0 4px 4px 0;
+    margin-right: 4px;
+    border-left: 2px solid var(--folder-color, #5d9eff);
+    margin-left: -2px;
+}
+
+.nav-file-title.is-active .nav-file-title-content {
+    color: var(--folder-color, #5d9eff) !important;
+    opacity: 1;
+    font-weight: 600;
+}
+
+/* =========================================================
+   2. Active folder title
+   ========================================================= */
+
+.nav-folder-title.is-active {
+    background: color-mix(in srgb, var(--folder-color, #5d9eff) 15%, transparent) !important;
+    border-radius: 0 4px 4px 0;
+    margin-right: 4px;
+}
+
+.nav-folder-title.is-active .nav-folder-title-content {
+    color: var(--folder-color, #5d9eff) !important;
+    opacity: 1;
+}
+
+/* =========================================================
+   3. Focused / multi-select state
+   ========================================================= */
+
+.nav-file-title.is-active:focus-within,
+.nav-file-title.is-being-dragged {
+    background: color-mix(in srgb, var(--folder-color, #5d9eff) 24%, transparent) !important;
+}
+
+/* =========================================================
+   4. Hover — lighter than active, same hue
+   ========================================================= */
+
+.nav-file-title:not(.is-active):hover {
+    background: color-mix(in srgb, var(--folder-color, #5d9eff) 7%, transparent) !important;
+    border-radius: 4px;
+}
+
+.nav-folder-title:not(.is-active):hover {
+    background: color-mix(in srgb, var(--folder-color, #5d9eff) 6%, transparent) !important;
+}

@@ -9,7 +9,13 @@
     "headline_colorful",
     "setting-grid-layout",
     "folder_beatify",
-    "editor_beatify"
+    "active-line",
+    "editor_beatify",
+    "floating_sidebar",
+    "sticky_folder",
+    "tbl_beatify",
+    "headline_beatify",
+    "code_highlight"
   ],
   "showViewHeader": false,
   "showRibbon": true,
