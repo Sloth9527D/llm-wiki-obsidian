@@ -24,6 +24,23 @@
     color: grey;
 }
 
+
+/* ! 模仿Colorful Note Borders插件，针对激活的窗口进行添加边框*/
+.markdown-preview-view:focus,
+.view-content>.markdown-source-view.mod-cm6>.cm-editor>.cm-scroller,
+.markdown-preview-view {
+    border: 4px solid rgba(255, 0, 0, 0);
+}
+
+.markdown-preview-view:focus {
+    border: 2px solid rgba(93, 158, 255, 0.25);
+}
+
+.markdown-preview-view:focus,
+.view-content>.markdown-source-view.mod-cm6>.cm-editor>.cm-scroller:focus-within {
+    border: 2px solid rgba(93, 158, 255, 0.25);
+}
+
 /*阅读模式渐变色分割线*/
 /* .markdown-preview-view hr {
     border-top: 1px solid;

@@ -5,17 +5,13 @@
   "monospaceFontFamily": "CaskaydiaMono Nerd Font",
   "textFontFamily": "霞鹜文楷",
   "enabledCssSnippets": [
-    "code_line_num",
-    "headline_colorful",
-    "setting-grid-layout",
-    "folder_beatify",
-    "active-line",
     "editor_beatify",
     "floating_sidebar",
     "sticky_folder",
     "tbl_beatify",
+    "code_highlight",
     "headline_beatify",
-    "code_highlight"
+    "pictrue_optimize"
   ],
   "showViewHeader": false,
   "showRibbon": true,
