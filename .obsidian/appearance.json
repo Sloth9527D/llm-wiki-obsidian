@@ -1,0 +1,19 @@
+{
+  "theme": "obsidian",
+  "cssTheme": "Minimal",
+  "interfaceFontFamily": "霞鹜文楷",
+  "monospaceFontFamily": "CaskaydiaMono Nerd Font",
+  "textFontFamily": "霞鹜文楷",
+  "enabledCssSnippets": [
+    "code_line_num",
+    "headline_colorful",
+    "setting-grid-layout",
+    "folder_beatify",
+    "editor_beatify"
+  ],
+  "showViewHeader": false,
+  "showRibbon": true,
+  "nativeMenus": true,
+  "accentColor": "#7387b0",
+  "baseFontSize": 16
+}
