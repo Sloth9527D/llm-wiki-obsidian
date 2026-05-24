@@ -7,15 +7,16 @@
   "enabledCssSnippets": [
     "editor_beatify",
     "floating_sidebar",
-    "sticky_folder",
     "tbl_beatify",
     "code_highlight",
     "headline_beatify",
-    "pictrue_optimize"
+    "pictrue_optimize",
+    "sticky_folder_test2",
+    "folder_beatify"
   ],
   "showViewHeader": false,
   "showRibbon": true,
   "nativeMenus": true,
   "accentColor": "#7387b0",
-  "baseFontSize": 16
+  "baseFontSize": 18
 }

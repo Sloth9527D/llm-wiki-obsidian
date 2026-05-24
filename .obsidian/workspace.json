@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "cdfdc0f4cefc0b50",
+        "id": "2f4235df260acf4d",
         "type": "tabs",
         "children": [
           {
-            "id": "f7815f9b06ed3881",
+            "id": "9842c20d572fc0dd",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 241.5
+    "width": 283.5
   },
   "right": {
     "id": "5e349dcde323b475",
@@ -183,22 +183,22 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "f7815f9b06ed3881",
+  "active": "9842c20d572fc0dd",
   "lastOpenFiles": [
+    "moc/LOG.md",
+    "moc/INDEX.md",
+    "moc/TAGS.md",
+    "CLAUDE.md",
     "templates/wiki.md",
     "templates/source.md",
     "templates/raw.md",
     "raw/assets/Pasted image 20260524194205.png",
     "raw/assets/Pasted image 20260524194543.png",
-    "moc/TAGS.md",
-    "CLAUDE.md",
     "未命名.md",
     "未命名 1.md",
     "未命名 2.md",
     "Pasted image 20260524194240.png",
     "raw/clippings/未命名.md",
-    "moc/LOG.md",
-    "moc/INDEX.md",
     "raw/clippings/未命名 1.md",
     "wiki/source",
     "raw/未命名 1.md",
