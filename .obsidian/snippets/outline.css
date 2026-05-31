@@ -1,0 +1,10 @@
+/*实时编辑模式*/
+.markdown-source-view.mod-cm6 .cm-indent::before {
+    border-right: 1px solid var(--indentation-guide-color) !important;
+}
+
+/*阅读模式*/
+.markdown-rendered.show-indentation-guide li>ul::before,
+.markdown-rendered.show-indentation-guide li>ol::before {
+    border-right: 1px solid var(--indentation-guide-color) !important;
+}
