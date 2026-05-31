@@ -1,0 +1,58 @@
+filters:
+  and:
+    - file.inFolder("wiki")
+properties:
+  type:
+    displayName: 类型
+  file.tags:
+    displayName: 标签
+  file.mtime:
+    displayName: 修改时间
+views:
+  - type: table
+    name: 全部
+    order:
+      - file.name
+      - file.tags
+      - file.mtime
+      - type
+  - type: table
+    name: 实体
+    filters:
+      and:
+        - file.inFolder("wiki/entities")
+    order:
+      - file.name
+      - type
+      - file.tags
+      - file.mtime
+  - type: table
+    name: 概念
+    filters:
+      and:
+        - file.inFolder("wiki/concepts")
+    order:
+      - file.name
+      - type
+      - file.tags
+      - file.mtime
+  - type: table
+    name: 来源
+    filters:
+      and:
+        - file.inFolder("wiki/source")
+    order:
+      - file.name
+      - type
+      - file.tags
+      - file.mtime
+  - type: table
+    name: 总结
+    filters:
+      and:
+        - file.inFolder("wiki/summaries")
+    order:
+      - file.name
+      - type
+      - file.tags
+      - file.mtime

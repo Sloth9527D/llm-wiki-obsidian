@@ -5,7 +5,7 @@ allowed-tools: PowerShell(obsidian*)
 
 ## 核心原则
 
-1. **路由优先**：在大量读取文件内容前，优先读取全局索引（如 `moc/index.md`、`moc/tags.md`）或使用 `obsidian search` 进行全景路由，避免盲目读取大量无关文件。
+1. **路由优先**：在大量读取文件内容前，优先通过 `obsidian base:query path="moc/INDEX.base"` 或读取 `moc/TAGS.md` 进行全景路由，避免盲目读取大量无关文件。
 2. **严谨溯源**：生成的回答必须做到“字字有出处”。任何观点或数据必须通过 Obsidian Flavored Markdown 规范（wikilink `[[来源页面]]` 或 callout 块）进行引用。
 3. **知识沉淀**：Query 不应仅仅是阅后即焚的对话。如果本次解答综合了 3 个以上的页面，产生了有价值的新对比、新视角或时间线，应当主动询问并帮助用户将其持久化归档。
 

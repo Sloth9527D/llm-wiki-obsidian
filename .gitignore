@@ -1,0 +1,5 @@
+.agents/*
+.claude/skills/*
+skills-lock.json
+README.md
+.obsidian/workspace.json

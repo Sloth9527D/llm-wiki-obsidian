@@ -10,6 +10,5 @@
   "wxlbMH@@wxlbMH-STMS": "wxlbMH-STMS-cssclasses",
   "minimal-style@@callouts-style": "callouts-default",
   "minimal-style@@tabs-style": "tabs-underline",
-  "Mo-Table@@tbMH-ds": "tbMH-ds-bt",
-  "Mo-Table@@tbMH-tt@@light": "#6BA2B6"
+  "Mo-Table@@tbMH-ds": "tbMH-ds-hlbt"
 }
