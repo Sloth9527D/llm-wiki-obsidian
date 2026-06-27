@@ -5,10 +5,10 @@
     color: inherit;
 } */
 
-/* 隐藏#号 */
+/* #号：半透明跟随标题色 */
 .cm-formatting.cm-header {
-    position: absolute;
-    opacity: 0;
+    opacity: 0.35;
+    color: inherit;
 }
 
 .view-content .markdown-source-view .inline-title {
@@ -119,27 +119,27 @@ body {
     --header-indicator-color-h6: var(--h6-color);
     --header-indicator-bg-h6: transparent;
 
-    /* 复用 folder_beatify 浅色调色板：h1→h6 暖→冷渐变（珊瑚/暖棕/绿/青/蓝/紫） */
-    --h1-indicator-color: #e0532b;
-    --h2-indicator-color: #b8642f;
-    --h3-indicator-color: #5a8a2c;
-    --h4-indicator-color: #3a6c8c;
-    --h5-indicator-color: #2f6fd6;
-    --h6-indicator-color: #8e3fd0;
+    /* h1→h6 同色蓝渐变：深海→皇家蓝→天蓝→皇家蓝→天蓝→浅蓝 */
+    --h1-indicator-color: #0c447c;
+    --h2-indicator-color: #185fa5;
+    --h3-indicator-color: #378add;
+    --h4-indicator-color: #185fa5;
+    --h5-indicator-color: #378add;
+    --h6-indicator-color: #85b7eb;
 
-    --color-red: #e0532b;
-    --color-orange: #b8642f;
-    --color-yellow: #5a8a2c;
-    --color-green: #3a6c8c;
-    --color-blue: #2f6fd6;
-    --color-purple: #8e3fd0;
+    --color-red: #0c447c;
+    --color-orange: #185fa5;
+    --color-yellow: #378add;
+    --color-green: #185fa5;
+    --color-blue: #378add;
+    --color-purple: #85b7eb;
 
-    --h1-color: #e0532b;
-    --h2-color: #b8642f;
-    --h3-color: #5a8a2c;
-    --h4-color: #3a6c8c;
-    --h5-color: #2f6fd6;
-    --h6-color: #8e3fd0;
+    --h1-color: #0c447c;
+    --h2-color: #185fa5;
+    --h3-color: #378add;
+    --h4-color: #185fa5;
+    --h5-color: #378add;
+    --h6-color: #85b7eb;
 }
 
 .theme-dark {
@@ -156,27 +156,27 @@ body {
     --header-indicator-color-h6: var(--background-primary);
     --header-indicator-bg-h6: var(--h6-color);
 
-    /* 复用 folder_beatify 深色调色板：h1→h6 暖→冷渐变（珊瑚/暖棕/绿/青/蓝/紫） */
-    --h1-indicator-color: #ff8c6b;
-    --h2-indicator-color: #d9996c;
-    --h3-indicator-color: #9bc06e;
-    --h4-indicator-color: #6c9ebf;
-    --h5-indicator-color: #5d9eff;
-    --h6-indicator-color: #b980ea;
+    /* h1→h6 同色渐变提亮：雾蓝→灰蓝→石板→钢青→深青→深海 */
+    --h1-indicator-color: #d6e0ed;
+    --h2-indicator-color: #b9c5d5;
+    --h3-indicator-color: #9aa8be;
+    --h4-indicator-color: #7c8ba5;
+    --h5-indicator-color: #66748c;
+    --h6-indicator-color: #505964;
 
-    --color-red: #ff8c6b;
-    --color-orange: #d9996c;
-    --color-yellow: #9bc06e;
-    --color-green: #6c9ebf;
-    --color-blue: #5d9eff;
-    --color-purple: #b980ea;
+    --color-red: #d6e0ed;
+    --color-orange: #b9c5d5;
+    --color-yellow: #9aa8be;
+    --color-green: #7c8ba5;
+    --color-blue: #66748c;
+    --color-purple: #505964;
 
-    --h1-color: #ff8c6b;
-    --h2-color: #d9996c;
-    --h3-color: #9bc06e;
-    --h4-color: #6c9ebf;
-    --h5-color: #5d9eff;
-    --h6-color: #b980ea;
+    --h1-color: #d6e0ed;
+    --h2-color: #b9c5d5;
+    --h3-color: #9aa8be;
+    --h4-color: #7c8ba5;
+    --h5-color: #66748c;
+    --h6-color: #505964;
 }
 
 /* h1 */

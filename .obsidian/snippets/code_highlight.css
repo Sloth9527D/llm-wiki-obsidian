@@ -1,16 +1,15 @@
-/* 行内代码高亮 —— 与 folder_beatify 配色语言统一
-   设计语言对齐：主题感知调色板 + color-mix 半透明强调色 + 4px 圆角 */
+/* 行内代码高亮 —— 蓝色系，与标题配色同源 */
 
-/* 深色模式：暖色强调直接复用 folder-6，文字向亮暖色靠拢 */
+/* 深色模式：水青强调，同色系浅文字 */
 .theme-dark {
-    --inline-code-accent: var(--folder-6, #d9996c);
-    --inline-code-text: #f0c9a8;
+    --inline-code-accent: #AAB4C0;
+    --inline-code-text: #AAB4C0;
 }
 
-/* 浅色模式：复用 folder-6，文字加深以保证对比度 */
+/* 浅色模式：暖灰 chip，深色文字主导视觉 */
 .theme-light {
-    --inline-code-accent: var(--folder-6, #b8642f);
-    --inline-code-text: #9a4f1f;
+    --inline-code-accent: #5A7A99 ;
+    --inline-code-text: #5A7A99 ;
 }
 
 /* 阅读模式：:not(pre) 排除代码块，覆盖正文/列表/标注/表格等所有行内代码
