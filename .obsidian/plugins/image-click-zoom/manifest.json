@@ -1,0 +1,9 @@
+{
+  "id": "image-click-zoom",
+  "name": "Image Click Zoom",
+  "version": "1.0.0",
+  "minAppVersion": "1.0.0",
+  "description": "单击图片切换放大，放大状态下 Ctrl+滚轮继续缩放，再次单击复原。",
+  "author": "custom",
+  "isDesktopOnly": false
+}

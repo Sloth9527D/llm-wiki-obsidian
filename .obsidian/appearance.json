@@ -1,22 +1,21 @@
 {
-  "theme": "obsidian",
+  "theme": "moonstone",
   "cssTheme": "Minimal",
   "interfaceFontFamily": "霞鹜文楷",
   "monospaceFontFamily": "CaskaydiaMono Nerd Font",
   "textFontFamily": "霞鹜文楷",
   "enabledCssSnippets": [
-    "editor_beatify",
-    "floating_sidebar",
     "tbl_beatify",
     "code_highlight",
-    "headline_beatify",
-    "pictrue_optimize",
     "sticky_folder_test2",
-    "folder_beatify"
+    "folder_beatify",
+    "editor_beatify",
+    "headline_beatify",
+    "floating_sidebar"
   ],
   "showViewHeader": false,
   "showRibbon": true,
   "nativeMenus": true,
   "accentColor": "#7387b0",
-  "baseFontSize": 18
+  "baseFontSize": 16
 }

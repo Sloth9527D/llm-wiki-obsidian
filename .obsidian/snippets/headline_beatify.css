@@ -119,26 +119,27 @@ body {
     --header-indicator-color-h6: var(--h6-color);
     --header-indicator-bg-h6: transparent;
 
-    --h1-indicator-color: #fe7968;
-    --h2-indicator-color: #f39c12;
-    --h3-indicator-color: #e5c700;
-    --h4-indicator-color: #78ba7e;
-    --h5-indicator-color: #038aff;
-    --h6-indicator-color: #9455ec;
+    /* 复用 folder_beatify 浅色调色板：h1→h6 暖→冷渐变（珊瑚/暖棕/绿/青/蓝/紫） */
+    --h1-indicator-color: #e0532b;
+    --h2-indicator-color: #b8642f;
+    --h3-indicator-color: #5a8a2c;
+    --h4-indicator-color: #3a6c8c;
+    --h5-indicator-color: #2f6fd6;
+    --h6-indicator-color: #8e3fd0;
 
-    --color-red: #fe7968;
-    --color-orange: #f39c12;
-    --color-yellow: #e5c700;
-    --color-green: #78ba7e;
-    --color-blue: #038aff;
-    --color-purple: #9455ec;
+    --color-red: #e0532b;
+    --color-orange: #b8642f;
+    --color-yellow: #5a8a2c;
+    --color-green: #3a6c8c;
+    --color-blue: #2f6fd6;
+    --color-purple: #8e3fd0;
 
-    --h1-color: #fe7968;
-    --h2-color: #f39c12;
-    --h3-color: #e5c700;
-    --h4-color: #78ba7e;
-    --h5-color: #038aff;
-    --h6-color: #9455ec;
+    --h1-color: #e0532b;
+    --h2-color: #b8642f;
+    --h3-color: #5a8a2c;
+    --h4-color: #3a6c8c;
+    --h5-color: #2f6fd6;
+    --h6-color: #8e3fd0;
 }
 
 .theme-dark {
@@ -155,26 +156,27 @@ body {
     --header-indicator-color-h6: var(--background-primary);
     --header-indicator-bg-h6: var(--h6-color);
 
-    --h1-indicator-color: #ff8a78;
-    --h2-indicator-color: #fabe58;
-    --h3-indicator-color: #ffec8b;
-    --h4-indicator-color: #87d37c;
-    --h5-indicator-color: #89c4f4;
-    --h6-indicator-color: #c69eff;
+    /* 复用 folder_beatify 深色调色板：h1→h6 暖→冷渐变（珊瑚/暖棕/绿/青/蓝/紫） */
+    --h1-indicator-color: #ff8c6b;
+    --h2-indicator-color: #d9996c;
+    --h3-indicator-color: #9bc06e;
+    --h4-indicator-color: #6c9ebf;
+    --h5-indicator-color: #5d9eff;
+    --h6-indicator-color: #b980ea;
 
-    --color-red: #ff8a78;
-    --color-orange: #fabe58;
-    --color-yellow: #ffec8b;
-    --color-green: #87d37c;
-    --color-blue: #89c4f4;
-    --color-purple: #c69eff;
+    --color-red: #ff8c6b;
+    --color-orange: #d9996c;
+    --color-yellow: #9bc06e;
+    --color-green: #6c9ebf;
+    --color-blue: #5d9eff;
+    --color-purple: #b980ea;
 
-    --h1-color: #ff8a78;
-    --h2-color: #fabe58;
-    --h3-color: #ffec8b;
-    --h4-color: #87d37c;
-    --h5-color: #89c4f4;
-    --h6-color: #c69eff;
+    --h1-color: #ff8c6b;
+    --h2-color: #d9996c;
+    --h3-color: #9bc06e;
+    --h4-color: #6c9ebf;
+    --h5-color: #5d9eff;
+    --h6-color: #b980ea;
 }
 
 /* h1 */

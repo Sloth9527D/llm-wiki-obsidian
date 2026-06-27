@@ -20,11 +20,16 @@ settings:
 	type: variable-text
 	default: 44px
 -
+	id: float-tab-width
+	title: 悬浮菜单栏展开宽度
+	type: variable-text
+	default: 280px
+-
 	id: left-tab-opacity
 	title: 左侧菜单栏的不透明度
 	type: variable-number-slider
 	default: 1
-	format: 
+	format:
 	min: 0.2
 	max: 1
 	step: 0.01
@@ -45,7 +50,7 @@ settings:
 	title: 右侧菜单栏的不透明度
 	type: variable-number-slider
 	default: 1
-	format: 
+	format:
 	min: 0.2
 	max: 1
 	step: 0.01
@@ -62,7 +67,7 @@ settings:
 	default: 80px
 -
 	id: tab-bottom-height
-	title: 菜单栏距离顶部底部
+	title: 菜单栏距离底部高度
 	type: variable-text
 	default: 25px
 
@@ -74,108 +79,104 @@ body {
     --left-tab-opacity: 1;
     --right-tab-opacity: 1;
     --tab-bottom-height: 25px;
-    --tab-hight: calc(100% - var(--tab-top-height) - var(--tab-bottom-height));
+    --tab-height: calc(100% - var(--tab-top-height) - var(--tab-bottom-height));
+    --float-tab-width: 280px;
 }
 
-/* 悬浮设置参考：[Obsidian 样式 - 实现 TiddlyWiki 故事河]( https://pkmer.cn/show/20230904215512 )
- */
-/* !左侧菜单栏 */
-.left-tab-float-choice .workspace-split.mod-horizontal.mod-left-split {
+/* 悬浮设置参考：
+   - [Obsidian 样式 - 实现 TiddlyWiki 故事河](https://pkmer.cn/show/20230904215512)
+   - [Obsidian 样式 - 隐藏右侧标签页标题](https://pkmer.cn/show/20240323141728)
+*/
+
+/* ! 左右菜单栏共用的悬浮定位 */
+.left-tab-float-choice .workspace-split.mod-horizontal.mod-left-split,
+.right-tab-float-choice .workspace-split.mod-horizontal.mod-right-split {
     position: fixed;
     display: flex;
-    width: 280px;
     top: var(--tab-top-height);
-    height: var(--tab-hight);
+    height: var(--tab-height);
     margin: 0;
-    transform: translateX(calc(-100% + var(--tab-right-length))) translateZ(0px);
-    transition: transform .6s;
-    transition-delay: 0.8s;
-    opacity: var(--left-tab-opacity);
     z-index: 2;
+    transition: transform .6s;
+    transition-delay: .8s;
+    /* 提示浏览器对 transform 启用 GPU 合成，动画更顺滑 */
+    will-change: transform;
 }
 
-.left-tab-float-choice .workspace-split.mod-left-split>.workspace-leaf-resize-handle {
-    border-right-style: unset;
-    border-right-width: unset;
+/* 左侧菜单栏 */
+.left-tab-float-choice .workspace-split.mod-horizontal.mod-left-split {
+    width: var(--float-tab-width);
+    opacity: var(--left-tab-opacity);
+    transform: translateX(calc(-100% + var(--tab-right-length))) translateZ(0);
+}
+
+/* 右侧菜单栏 */
+.right-tab-float-choice .workspace-split.mod-horizontal.mod-right-split {
+    right: 1px;
+    width: var(--float-tab-width);
+    opacity: var(--right-tab-opacity);
+    transform: translateX(100%) translateZ(0);
+}
+
+/* 去掉调整手柄的右边框 */
+.left-tab-float-choice .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.right-tab-float-choice .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+    border-right: none;
+}
+
+/* ! 悬停 / 聚焦 / 拖拽时展开（共用部分） */
+.left-tab-float-choice .workspace-split.mod-horizontal.mod-left-split:hover,
+.left-tab-float-choice .workspace-split.mod-horizontal.mod-left-split:focus-within,
+body.is-grabbing:is(.left-tab-float-choice) .workspace-split.mod-horizontal.mod-left-split,
+.right-tab-float-choice .workspace-split.mod-horizontal.mod-right-split:hover,
+.right-tab-float-choice .workspace-split.mod-horizontal.mod-right-split:focus-within,
+body.is-grabbing:is(.right-tab-float-choice) .workspace-split.mod-horizontal.mod-right-split {
+    overflow: visible;
+    /* 展开时无延迟，立即响应（transition 继承基础规则的 transform .6s） */
+    transition-delay: 0s;
 }
 
 .left-tab-float-choice .workspace-split.mod-horizontal.mod-left-split:hover,
 .left-tab-float-choice .workspace-split.mod-horizontal.mod-left-split:focus-within,
 body.is-grabbing:is(.left-tab-float-choice) .workspace-split.mod-horizontal.mod-left-split {
-    overflow: visible;
-    transform: translateX(var(--tab-right-length)) translateZ(0px);
-    transition: transform .6s;
+    transform: translateX(var(--tab-right-length)) translateZ(0);
 }
 
-/* 添加元素 */
-.left-tab-float-choice .workspace-split.mod-horizontal.mod-left-split::before {
-    content: "";
-    text-align: end !important;
-    background-color: var(--divider-color);
-    position: absolute;
-    display: flex;
-    width: 12px;
-    height: calc(var(--tab-hight) / 2);
-    top: calc((var(--tab-hight) / 4 + var(--tab-top-height)));
-    right: -12px;
-    border-top-right-radius: var(--input-radius);
-    border-bottom-right-radius: var(--input-radius);
-    box-shadow: var(--shadow-s);
-    opacity: 0.9;
-}
-
-/* !右侧侧边栏 */
-.right-tab-float-choice .workspace-split.mod-horizontal.mod-right-split {
-    position: fixed;
-    display: flex;
-    top: var(--tab-top-height);
-    right: 1px;
-    height: var(--tab-hight);
-    margin: 0;
-    opacity: var(--right-tab-opacity);
-    transform: translateX(100%) translateZ(0px);
-    transition: transform .6s;
-    transition-delay: 0.8s;
-    opacity: var(--right-tab-opacity);
-    z-index: 2;
-}
-
-.right-tab-float-choice .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
-    border-right-style: unset;
-    border-right-width: unset;
-}
-
-/* 拖拽悬浮展开设置参考：[Obsidian 样式 - 隐藏右侧标签页标题]( https://pkmer.cn/show/20240323141728 )
- */
 .right-tab-float-choice .workspace-split.mod-horizontal.mod-right-split:hover,
 .right-tab-float-choice .workspace-split.mod-horizontal.mod-right-split:focus-within,
 body.is-grabbing:is(.right-tab-float-choice) .workspace-split.mod-horizontal.mod-right-split {
-    overflow: visible;
-    transform: translateX(0px) translateZ(0px) !important;
-    transition: transform .6s;
+    transform: translateX(0) translateZ(0) !important;
 }
 
-/* 添加元素 */
+/* ! 边缘拖拽提示条（左右共用样式） */
+.left-tab-float-choice .workspace-split.mod-horizontal.mod-left-split::before,
 .right-tab-float-choice .workspace-split.mod-horizontal.mod-right-split::before {
     content: "";
-    text-align: end !important;
-    background-color: var(--divider-color);
     position: absolute;
     display: flex;
     width: 12px;
-    height: calc(var(--tab-hight) / 2);
-    top: calc((var(--tab-hight) / 4 + var(--tab-top-height)));
-    left: -12px;
-    border-top-left-radius: var(--input-radius);
-    border-bottom-left-radius: var(--input-radius);
+    height: calc(var(--tab-height) / 2);
+    /* 父级 split 原点已在 --tab-top-height，此处仅需在容器内垂直居中 */
+    top: calc(var(--tab-height) / 4);
+    background-color: var(--divider-color);
     box-shadow: var(--shadow-s);
     opacity: 0.9;
 }
 
+.left-tab-float-choice .workspace-split.mod-horizontal.mod-left-split::before {
+    right: -12px;
+    border-top-right-radius: var(--input-radius);
+    border-bottom-right-radius: var(--input-radius);
+}
 
-/* ! 直接隐藏掉关闭和最小化按钮 */
+.right-tab-float-choice .workspace-split.mod-horizontal.mod-right-split::before {
+    left: -12px;
+    border-top-left-radius: var(--input-radius);
+    border-bottom-left-radius: var(--input-radius);
+}
 
-/* 不显示最大最小化后，使那块区域可以双击及拖动 */
+/* ! 隐藏关闭和最小化按钮 */
+/* 隐藏后让该区域可双击及拖动 */
 .mod-windows .titlebar-button,
 .is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-right-space .workspace-tab-header-container:after {
     display: none;

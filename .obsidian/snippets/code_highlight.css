@@ -1,43 +1,28 @@
-/*实时编辑*/
-/* .markdown-source-view span.cm-inline-code {
-    padding: 4px;
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
+/* 行内代码高亮 —— 与 folder_beatify 配色语言统一
+   设计语言对齐：主题感知调色板 + color-mix 半透明强调色 + 4px 圆角 */
+
+/* 深色模式：暖色强调直接复用 folder-6，文字向亮暖色靠拢 */
+.theme-dark {
+    --inline-code-accent: var(--folder-6, #d9996c);
+    --inline-code-text: #f0c9a8;
 }
 
-.theme-light .markdown-source-view span.cm-inline-code {
-    color: black;
-    background-color: #f6f1c6;
-    border-color: #a7a2a2;
+/* 浅色模式：复用 folder-6，文字加深以保证对比度 */
+.theme-light {
+    --inline-code-accent: var(--folder-6, #b8642f);
+    --inline-code-text: #9a4f1f;
 }
 
-.theme-dark .markdown-source-view span.cm-inline-code {
-    color: black;
-    background-color: #f6f1c6;
-    border-color: #7c7575
-} */
-
-/*阅读模式*/
-div p code {
-    padding: 4px;
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.theme-light div p code {
-    color: black;
-    background-color: #f6f1c6;
-    border-color: #a7a2a2;
-}
-
-.theme-dark div p code {
-    color: black;
-    background-color: #f6f1c6;
-    border-color: #7c7575
+/* 阅读模式：:not(pre) 排除代码块，覆盖正文/列表/标注/表格等所有行内代码
+   实时编辑（CM6）：.cm-inline-code */
+.markdown-rendered :not(pre) > code,
+.markdown-source-view.mod-cm6 .cm-inline-code {
+    padding: 2px 5px;
+    margin: 0 3px;
+    /* 复用 folder 系统的圆角变量，缺省回退 4px */
+    border-radius: var(--folder-radius, 4px);
+    color: var(--inline-code-text);
+    /* 半透明强调色填充，与文件夹高亮的 color-mix 渐变同源 */
+    background-color: color-mix(in srgb, var(--inline-code-accent) 14%, transparent);
+    border: 1px solid color-mix(in srgb, var(--inline-code-accent) 35%, transparent);
 }

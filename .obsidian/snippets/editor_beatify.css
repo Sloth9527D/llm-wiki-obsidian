@@ -7,10 +7,9 @@
     text-align: center;
 }
 
-/* 选中高亮 */
+/* 选中高亮 —— 复用 folder_beatify 的蓝色强调（--folder-2），半透明填充保证文字可读 */
 ::selection {
-    color: white !important;
-    background: darkcyan !important;
+    background: color-mix(in srgb, var(--folder-2, #5d9eff) 32%, transparent) !important;
 }
 
 /* 高亮当前行 */
@@ -33,12 +32,12 @@
 }
 
 .markdown-preview-view:focus {
-    border: 2px solid rgba(93, 158, 255, 0.25);
+    border: 2px solid color-mix(in srgb, var(--folder-2, #5d9eff) 25%, transparent);
 }
 
 .markdown-preview-view:focus,
 .view-content>.markdown-source-view.mod-cm6>.cm-editor>.cm-scroller:focus-within {
-    border: 2px solid rgba(93, 158, 255, 0.25);
+    border: 2px solid color-mix(in srgb, var(--folder-2, #5d9eff) 25%, transparent);
 }
 
 /*阅读模式渐变色分割线*/

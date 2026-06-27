@@ -2,5 +2,7 @@
   "table-editor-obsidian",
   "obsidian-style-settings",
   "obsidian-linter",
-  "terminal"
+  "terminal",
+  "templater-obsidian",
+  "image-click-zoom"
 ]

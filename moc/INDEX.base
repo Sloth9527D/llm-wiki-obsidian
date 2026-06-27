@@ -26,6 +26,13 @@ views:
       - type
       - file.tags
       - file.mtime
+    sort:
+      - property: file.mtime
+        direction: ASC
+      - property: file.tags
+        direction: DESC
+      - property: type
+        direction: ASC
   - type: table
     name: 概念
     filters:

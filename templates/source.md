@@ -1,8 +1,9 @@
 ---
-ingested_time: {{date}} {{time}}
-source: # raw中来源
+ingested_time: <% tp.file.creation_date() %>
+mtime: <% tp.file.last_modified_date() %>
+source:
 tags: []
-related: [] # 相关wiki页面的 wikilinks]
+related: []
 ---
 
 ## 核心要点

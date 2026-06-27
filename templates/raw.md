@@ -1,5 +1,5 @@
 ---
-create_time: {{date}} {{time}}
+create_time: <% tp.file.creation_date() %>
 ingest_time:
-status: # skip/ingested/pend
+status: <% tp.system.suggester(["skip","ingested","pend"],["skip","ingested","pend"]) %> 
 ---

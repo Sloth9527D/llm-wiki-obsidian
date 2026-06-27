@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "2f4235df260acf4d",
+        "id": "dc63acd3f54449df",
         "type": "tabs",
         "children": [
           {
-            "id": "9842c20d572fc0dd",
+            "id": "fcff4cbfe7004bd8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "CLAUDE.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
@@ -165,7 +165,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -176,52 +176,54 @@
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
-      "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "bases:新建数据库": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "terminal:Open terminal": false
+      "terminal:Open terminal": false,
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "9842c20d572fc0dd",
+  "active": "fcff4cbfe7004bd8",
   "lastOpenFiles": [
-    "moc/LOG.md",
-    "moc/INDEX.md",
-    "moc/TAGS.md",
+    "raw/assets/Pasted image 20260627203721.png",
+    "raw/win11配置.md",
     "CLAUDE.md",
+    "未命名.md",
     "templates/wiki.md",
     "templates/source.md",
     "templates/raw.md",
+    "moc/INDEX.base",
+    "moc/LOG.md",
+    "wiki/entities/未命名.md",
+    "moc/TAGS.md",
+    "raw/SKILL.md",
+    "raw/未命名.md",
+    "README.md",
+    "CLAUDE.md.tmp.11384.7be3f9fa31e6",
+    "CLAUDE.md.tmp.11384.855555737a45",
+    "CLAUDE.md.tmp.11384.b67e822ea8ce",
+    "CLAUDE.md.tmp.11384.b5c1f79a75d3",
+    "CLAUDE.md.tmp.11384.903da6221952",
+    "CLAUDE.md.tmp.11384.2d4e11bd71c0",
+    "CLAUDE.md.tmp.11384.9a3b0550dadd",
+    "moc/INDEX.md.tmp.11384.78ec8b6b924b",
+    "moc/INDEX.md",
+    "moc/INDEX.md.tmp.11384.b7e7944299a9",
     "raw/assets/Pasted image 20260524194205.png",
     "raw/assets/Pasted image 20260524194543.png",
-    "未命名.md",
     "未命名 1.md",
     "未命名 2.md",
     "Pasted image 20260524194240.png",
     "raw/clippings/未命名.md",
     "raw/clippings/未命名 1.md",
-    "wiki/source",
     "raw/未命名 1.md",
-    "raw/未命名.md",
     "未命名.canvas",
     "raw/clippings/我的世界.md",
     "raw/test.md",
-    "新建文件夹",
-    "wiki/summaries",
     "moc/未命名.md",
-    "wiki/entities/未命名",
-    "moc",
-    "wiki/entities",
-    "wiki/concepts/未命名",
-    "wiki/concepts",
-    "raw/assets",
-    "templates",
     "raw/clippings/CSS 代码片段-Pkmer.md",
     "wiki/fadf/fdsf.md",
     "raw/clippings/Claude Code 通关.md",
-    "我的.md",
-    "fdsfasd.md",
-    "window安装.md",
-    "欢迎.md"
+    "我的.md"
   ]
 }

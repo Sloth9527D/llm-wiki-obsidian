@@ -141,13 +141,13 @@ settings:
 
 /*表格边框颜色*/
 body.theme-light {
-    --table-border-color: rgb(var(--tbMH-kj-color, 81, 81, 81));
-    --table-add-button-border-color: rgb(var(--tbMH-kj-color, 81, 81, 81));
+    --table-border-color: rgb(var(--tbMH-kj-color, 170, 140, 112));
+    --table-add-button-border-color: rgb(var(--tbMH-kj-color, 170, 140, 112));
 }
 
 body.theme-dark {
-    --table-border-color: rgb(var(--tbMH-kj-color, 108, 88, 88));
-    --table-add-button-border-color: rgb(var(--tbMH-kj-color, 108, 88, 88));
+    --table-border-color: rgb(var(--tbMH-kj-color, 120, 96, 76));
+    --table-add-button-border-color: rgb(var(--tbMH-kj-color, 120, 96, 76));
 }
 
 /*表格边框粗细*/
@@ -164,19 +164,19 @@ body.theme-dark {
 
 /*表格底色*/
 body.theme-light.tbMH-ds-cg :is(.markdown-preview-view, .markdown-source-view.mod-cm6 .cm-table-widget) th {
-    background-color: rgb(var(--tbMH-th, 145, 163, 143))
+    background-color: rgb(var(--tbMH-th, 224, 198, 168))
 }
 
 body.theme-light.tbMH-ds-cg :is(.markdown-preview-view, .markdown-source-view.mod-cm6 .cm-table-widget) tr:nth-child(2n) td {
-    background-color: rgb(var(--tbMH-td, 145, 163, 143))
+    background-color: rgb(var(--tbMH-td, 244, 236, 226))
 }
 
 body.theme-dark.tbMH-ds-cg :is(.markdown-preview-view, .markdown-source-view.mod-cm6 .cm-table-widget) th {
-    background-color: rgb(var(--tbMH-th, 32, 23, 23))
+    background-color: rgb(var(--tbMH-th, 58, 44, 34))
 }
 
 body.theme-dark.tbMH-ds-cg :is(.markdown-preview-view, .markdown-source-view.mod-cm6 .cm-table-widget) tr:nth-child(2n) td {
-    background-color: rgb(var(--tbMH-td, 32, 23, 23))
+    background-color: rgb(var(--tbMH-td, 46, 37, 30))
 }
 
 /*全宽表格*/
@@ -255,12 +255,12 @@ body.tbMH-yuan :is(.markdown-source-view.mod-cm6 .cm-table-widget .table-wrapper
 /*点击连框颜色*/
 body.theme-light .markdown-source-view.mod-cm6 .cm-table-widget th.is-selected::after,
 body.theme-light .markdown-source-view.mod-cm6 .cm-table-widget td.is-selected::after {
-    background-color: rgba(var(--tbMH-th-djDS, 204, 178, 31, 0.279))
+    background-color: rgba(var(--tbMH-th-djDS, 184, 100, 47, 0.25))
 }
 
 body.theme-dark .markdown-source-view.mod-cm6 .cm-table-widget th.is-selected::after,
 body.theme-dark .markdown-source-view.mod-cm6 .cm-table-widget td.is-selected::after {
-    background-color: rgba(var(--tbMH-th-djDS, 149, 31, 204, 0.203))
+    background-color: rgba(var(--tbMH-th-djDS, 217, 153, 108, 0.22))
 }
 
 /*不超过模式（非均匀模式）*/
@@ -276,11 +276,11 @@ body.tbMH-kd-ncc-jy :is(.markdown-source-view.mod-cm6 .cm-table-widget .table-wr
 
 /*标题底色模式*/
 body.theme-light.tbMH-ds-bt :is(.markdown-preview-view, .markdown-source-view.mod-cm6 .cm-table-widget) th {
-    background-color: rgb(var(--tbMH-th, 145, 163, 143))
+    background-color: rgb(var(--tbMH-th, 224, 198, 168))
 }
 
 body.theme-dark.tbMH-ds-bt :is(.markdown-preview-view, .markdown-source-view.mod-cm6 .cm-table-widget) th {
-    background-color: rgb(var(--tbMH-th, 32, 23, 23))
+    background-color: rgb(var(--tbMH-th, 58, 44, 34))
 }
 
 body.tbMH-ds-bt tr:nth-child(2n) td {
@@ -298,23 +298,23 @@ body.tbMH-ds-tm tr:nth-child(2n) td {
 
 /*行列标题底色模式*/
 body.theme-dark.tbMH-ds-hlbt :is(.markdown-preview-view, .markdown-source-view.mod-cm6 .cm-table-widget) th:first-child {
-    background-color: rgb(var(--tbMH-tt, 32, 23, 23))
+    background-color: rgb(var(--tbMH-tt, 58, 44, 34))
 }
 
 body.theme-light.tbMH-ds-hlbt :is(.markdown-preview-view, .markdown-source-view.mod-cm6 .cm-table-widget) th {
-    background-color: rgb(var(--tbMH-th, 145, 163, 143))
+    background-color: rgb(var(--tbMH-th, 224, 198, 168))
 }
 
 body.theme-dark.tbMH-ds-hlbt :is(.markdown-preview-view, .markdown-source-view.mod-cm6 .cm-table-widget) th {
-    background-color: rgb(var(--tbMH-th, 32, 23, 23))
+    background-color: rgb(var(--tbMH-th, 58, 44, 34))
 }
 
 body.theme-light.tbMH-ds-hlbt :is(.markdown-preview-view, .markdown-source-view.mod-cm6 .cm-table-widget) td:first-child {
-    background-color: rgb(var(--tbMH-th-l, 145, 163, 143))
+    background-color: rgb(var(--tbMH-th-l, 224, 198, 168))
 }
 
 body.theme-dark.tbMH-ds-hlbt :is(.markdown-preview-view, .markdown-source-view.mod-cm6 .cm-table-widget) td:first-child {
-    background-color: rgb(var(--tbMH-th-l, 32, 23, 23))
+    background-color: rgb(var(--tbMH-th-l, 58, 44, 34))
 }
 
 body.tbMH-ds-hlbt .markdown-rendered td:first-child {
@@ -327,35 +327,35 @@ body.tbMH-ds-hlbt .markdown-rendered td:first-child {
 
 /*行列标题&间隔层底色模式*/
 body.theme-light.tbMH-ds-hlbt-jg :is(.markdown-preview-view, .markdown-source-view.mod-cm6 .cm-table-widget) th:first-child {
-    background-color: rgb(var(--tbMH-tt, 145, 163, 143))
+    background-color: rgb(var(--tbMH-tt, 224, 198, 168))
 }
 
 body.theme-dark.tbMH-ds-hlbt-jg :is(.markdown-preview-view, .markdown-source-view.mod-cm6 .cm-table-widget) th:first-child {
-    background-color: rgb(var(--tbMH-tt, 32, 23, 23))
+    background-color: rgb(var(--tbMH-tt, 58, 44, 34))
 }
 
 body.theme-light.tbMH-ds-hlbt-jg :is(.markdown-preview-view, .markdown-source-view.mod-cm6 .cm-table-widget) th {
-    background-color: rgb(var(--tbMH-th, 145, 163, 143))
+    background-color: rgb(var(--tbMH-th, 224, 198, 168))
 }
 
 body.theme-dark.tbMH-ds-hlbt-jg :is(.markdown-preview-view, .markdown-source-view.mod-cm6 .cm-table-widget) th {
-    background-color: rgb(var(--tbMH-th, 32, 23, 23))
+    background-color: rgb(var(--tbMH-th, 58, 44, 34))
 }
 
 body.theme-light.tbMH-ds-hlbt-jg :is(.markdown-preview-view, .markdown-source-view.mod-cm6 .cm-table-widget) td:first-child {
-    background-color: rgb(var(--tbMH-th-l, 145, 163, 143))
+    background-color: rgb(var(--tbMH-th-l, 224, 198, 168))
 }
 
 body.theme-dark.tbMH-ds-hlbt-jg :is(.markdown-preview-view, .markdown-source-view.mod-cm6 .cm-table-widget) td:first-child {
-    background-color: rgb(var(--tbMH-th-l, 32, 23, 23))
+    background-color: rgb(var(--tbMH-th-l, 58, 44, 34))
 }
 
 body.theme-light.tbMH-ds-hlbt-jg :is(.markdown-preview-view, .markdown-source-view.mod-cm6 .cm-table-widget) tr:nth-child(2n) td:not(:first-child) {
-    background-color: rgb(var(--tbMH-td, 145, 163, 143))
+    background-color: rgb(var(--tbMH-td, 244, 236, 226))
 }
 
 body.theme-dark.tbMH-ds-hlbt-jg :is(.markdown-preview-view, .markdown-source-view.mod-cm6 .cm-table-widget) tr:nth-child(2n) td:not(:first-child) {
-    background-color: rgb(var(--tbMH-td, 32, 23, 23))
+    background-color: rgb(var(--tbMH-td, 46, 37, 30))
 }
 
 body.tbMH-ds-hlbt-jg .markdown-rendered td:first-child {
@@ -370,27 +370,27 @@ body.tbMH-ds-hlbt-jg .markdown-rendered td:first-child {
 
 /*常规底色模式 .常规底色模式*/
 body.theme-light .常规底色模式 th:first-child {
-    background-color: rgb(var(--tbMH-th, 145, 163, 143)) !important
+    background-color: rgb(var(--tbMH-th, 224, 198, 168)) !important
 }
 
 body.theme-dark .常规底色模式 th:first-child {
-    background-color: rgb(var(--tbMH-th, 32, 23, 23)) !important
+    background-color: rgb(var(--tbMH-th, 58, 44, 34)) !important
 }
 
 body.theme-light.常规底色模式 th {
-    background-color: rgb(var(--tbMH-th, 145, 163, 143)) !important
+    background-color: rgb(var(--tbMH-th, 224, 198, 168)) !important
 }
 
 body.theme-light.常规底色模式 tr:nth-child(2n) td {
-    background-color: rgb(var(--tbMH-td, 145, 163, 143)) !important
+    background-color: rgb(var(--tbMH-td, 244, 236, 226)) !important
 }
 
 body.theme-dark .常规底色模式 th {
-    background-color: rgb(var(--tbMH-th, 32, 23, 23)) !important
+    background-color: rgb(var(--tbMH-th, 58, 44, 34)) !important
 }
 
 body.theme-dark .常规底色模式 tr:nth-child(2n) td {
-    background-color: rgb(var(--tbMH-td, 32, 23, 23)) !important
+    background-color: rgb(var(--tbMH-td, 46, 37, 30)) !important
 }
 
 .常规底色模式 tr:nth-child(2n-1) td {
@@ -403,19 +403,19 @@ body.theme-dark .常规底色模式 tr:nth-child(2n) td {
 
 /*标题底色模式 .标题底色模式*/
 body.theme-light .标题底色模式 th:first-child {
-    background-color: rgb(var(--tbMH-th, 145, 163, 143)) !important
+    background-color: rgb(var(--tbMH-th, 224, 198, 168)) !important
 }
 
 body.theme-dark .标题底色模式 th:first-child {
-    background-color: rgb(var(--tbMH-th, 32, 23, 23)) !important
+    background-color: rgb(var(--tbMH-th, 58, 44, 34)) !important
 }
 
 body.theme-light .标题底色模式 th {
-    background-color: rgb(var(--tbMH-th, 145, 163, 143)) !important
+    background-color: rgb(var(--tbMH-th, 224, 198, 168)) !important
 }
 
 body.theme-dark .标题底色模式 th {
-    background-color: rgb(var(--tbMH-th, 32, 23, 23)) !important
+    background-color: rgb(var(--tbMH-th, 58, 44, 34)) !important
 }
 
 .标题底色模式 tr:nth-child(2n-1) td {
@@ -432,27 +432,27 @@ body.theme-dark .标题底色模式 th {
 
 /*行列标题底色模式 .行列标题底色模式*/
 body.theme-light .行列标题底色模式 th:first-child {
-    background-color: rgb(var(--tbMH-tt, 145, 163, 143)) !important
+    background-color: rgb(var(--tbMH-tt, 224, 198, 168)) !important
 }
 
 body.theme-dark .行列标题底色模式 th:first-child {
-    background-color: rgb(var(--tbMH-tt, 32, 23, 23)) !important
+    background-color: rgb(var(--tbMH-tt, 58, 44, 34)) !important
 }
 
 body.theme-light .行列标题底色模式 th {
-    background-color: rgb(var(--tbMH-th, 145, 163, 143)) !important
+    background-color: rgb(var(--tbMH-th, 224, 198, 168)) !important
 }
 
 body.theme-dark .行列标题底色模式 th {
-    background-color: rgb(var(--tbMH-th, 32, 23, 23)) !important
+    background-color: rgb(var(--tbMH-th, 58, 44, 34)) !important
 }
 
 body.theme-light .行列标题底色模式 td:first-child {
-    background-color: rgb(var(--tbMH-th-l, 145, 163, 143)) !important
+    background-color: rgb(var(--tbMH-th-l, 224, 198, 168)) !important
 }
 
 body.theme-dark .行列标题底色模式 td:first-child {
-    background-color: rgb(var(--tbMH-th-l, 32, 23, 23)) !important
+    background-color: rgb(var(--tbMH-th-l, 58, 44, 34)) !important
 }
 
 .行列标题底色模式 td:first-child {
@@ -474,31 +474,31 @@ body.theme-dark .行列标题底色模式 tr:nth-child(2n) td:not(:first-child) 
 
 /*行列标题间隔层模式 .行列标题间隔层模式*/
 body.theme-dark .行列标题间隔层模式 th:first-child {
-    background-color: rgb(var(--tbMH-tt, 32, 23, 23)) !important
+    background-color: rgb(var(--tbMH-tt, 58, 44, 34)) !important
 }
 
 body.theme-light .行列标题间隔层模式 th {
-    background-color: rgb(var(--tbMH-th, 145, 163, 143)) !important
+    background-color: rgb(var(--tbMH-th, 224, 198, 168)) !important
 }
 
 body.theme-dark .行列标题间隔层模式 th {
-    background-color: rgb(var(--tbMH-th, 32, 23, 23)) !important
+    background-color: rgb(var(--tbMH-th, 58, 44, 34)) !important
 }
 
 body.theme-light .行列标题间隔层模式 td:first-child {
-    background-color: rgb(var(--tbMH-th-l, 145, 163, 143)) !important
+    background-color: rgb(var(--tbMH-th-l, 224, 198, 168)) !important
 }
 
 body.theme-dark .行列标题间隔层模式 td:first-child {
-    background-color: rgb(var(--tbMH-th-l, 32, 23, 23)) !important
+    background-color: rgb(var(--tbMH-th-l, 58, 44, 34)) !important
 }
 
 body.theme-light .行列标题间隔层模式 tr:nth-child(2n) td:not(:first-child) {
-    background-color: rgb(var(--tbMH-td, 145, 163, 143)) !important
+    background-color: rgb(var(--tbMH-td, 244, 236, 226)) !important
 }
 
 body.theme-dark .行列标题间隔层模式 tr:nth-child(2n) td:not(:first-child) {
-    background-color: rgb(var(--tbMH-td, 32, 23, 23)) !important
+    background-color: rgb(var(--tbMH-td, 46, 37, 30)) !important
 }
 
 .行列标题间隔层模式 td:first-child {
