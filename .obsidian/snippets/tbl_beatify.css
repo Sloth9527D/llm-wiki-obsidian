@@ -141,8 +141,8 @@ settings:
 
 /*表格边框颜色*/
 body.theme-light {
-    --table-border-color: rgb(var(--tbMH-kj-color, 170, 140, 112));
-    --table-add-button-border-color: rgb(var(--tbMH-kj-color, 170, 140, 112));
+    --table-border-color: rgb(var(--tbMH-kj-color, 220, 220, 218));
+    --table-add-button-border-color: rgb(var(--tbMH-kj-color, 220, 220, 218));
 }
 
 body.theme-dark {
