@@ -48,21 +48,3 @@
 1. SOP1：知识摄入(Ingest)，从raw材料中提炼关键发现、方法论、架构设计和批判性观点，创建或更新`entity/concept`页面，更新`LOG.md/TAGS.md`
 2. SOP2：查询(Query)，以`moc/INDEX.base`为起点搜索wiki，回答问题，如有长期价值归档
 3. SOP3：体检(Lint)，修复未引用的孤立页面 (Orphans)、陈旧的结论、缺少双向链接的术语、TAGS冗余
-
-## fsadfasdfasfsa
-
-### fsdafasdfasd
-
-#### fdsafsafasd
-
-##### fdsfasfasdfas
-
-###### asdfs
-
-
-## w1de1shijie1
-
-### ##
-###
-
-### 我的
